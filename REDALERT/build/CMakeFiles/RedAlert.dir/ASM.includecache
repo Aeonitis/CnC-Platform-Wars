@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/aeonitis/dev/repos/wip/CnC-Platform-Wars/REDALERT/src/2support.asm
+
+/Users/aeonitis/dev/repos/wip/CnC-Platform-Wars/REDALERT/src/2txtprnt.asm
+
+/Users/aeonitis/dev/repos/wip/CnC-Platform-Wars/REDALERT/src/coorda.asm
+
+/Users/aeonitis/dev/repos/wip/CnC-Platform-Wars/REDALERT/src/cpuid.asm
+
+/Users/aeonitis/dev/repos/wip/CnC-Platform-Wars/REDALERT/src/ipxprot.asm
+
+/Users/aeonitis/dev/repos/wip/CnC-Platform-Wars/REDALERT/src/ipxreal.asm
+
+/Users/aeonitis/dev/repos/wip/CnC-Platform-Wars/REDALERT/src/keyfbuff.asm
+
+/Users/aeonitis/dev/repos/wip/CnC-Platform-Wars/REDALERT/src/lcwcomp.asm
+
+/Users/aeonitis/dev/repos/wip/CnC-Platform-Wars/REDALERT/src/mmx.asm
+
+/Users/aeonitis/dev/repos/wip/CnC-Platform-Wars/REDALERT/src/support.asm
+
+/Users/aeonitis/dev/repos/wip/CnC-Platform-Wars/REDALERT/src/txtprnt.asm
+
+/Users/aeonitis/dev/repos/wip/CnC-Platform-Wars/REDALERT/src/win32/lcwcomp.asm
+
+/Users/aeonitis/dev/repos/wip/CnC-Platform-Wars/REDALERT/src/win32/lcwuncmp.asm
+
+/Users/aeonitis/dev/repos/wip/CnC-Platform-Wars/REDALERT/src/win32/tobuff.asm
+
