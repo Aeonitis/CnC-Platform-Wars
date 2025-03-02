@@ -1,16 +1,3 @@
-'''
-Copyright 2020 Electronic Arts Inc.
-
-This program is is free software: you can redistribute it and/or modify it under the terms of 
-the GNU General Public License as published by the Free Software Foundation, 
-either version 3 of the License, or (at your option) any later version.
-
-This program is is distributed in the hope that it will be useful, but with permitted additional restrictions 
-under Section 7 of the GPL. See the GNU General Public License in LICENSE.TXT 
-distributed with this program. You should have received a copy of the 
-GNU General Public License along with permitted additional restrictions 
-with this program. If not, see https://github.com/electronicarts/CnC_Remastered_Collection
-'''
 import argparse
 import io
 import json
@@ -19,6 +6,11 @@ import os
 import StringIO
 import sys
 import zipfile
+
+# This script helps:
+#   - to crop and expand TGA images
+#   - to zip directories of TGA files and unzip archives of TGA files
+# TODO: Python 2 to Python 3 conversion
 
 def overwrite_prompt(question, default=False):
     prompt = " [Y/n] " if default else " [y/N] "

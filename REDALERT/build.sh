@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Set defaults
-BUILD_TYPE="Release"
+BUILD_TYPE="TryingToCompile"
 BUILD_DIR="build"
 
 # Detect OS
