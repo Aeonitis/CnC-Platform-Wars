@@ -1,7 +1,9 @@
 # C&C: Red Alert [Platform Wars]
 
 **Overview:**
-RedAlert is a project aimed at porting the classic Windows game, C&C: Red Alert by EA, to be multi-platform. Our goal is to build a shared library using CMake that supports various systems, including macOS and Linux.
+RedAlert is a project aimed at porting the classic Windows game, C&C: Red Alert from archived [Github repo by EA](https://github.com/electronicarts/CnC_Remastered_Collection), to be multi-platform. Our goal is to build a shared library using CMake that supports various systems, including macOS and Linux.
+
+Read comments for [excited gamer wishes](https://www.reddit.com/r/commandandconquer/comments/1izmpmb/cc_steam_workshop_support_source_code/)!!
 
 **Project Goals:**
 - Port the original C&C: Red Alert to modern platforms.
@@ -38,20 +40,20 @@ This is the first challenge, a win32 specific class, which can be copied and it'
 aeonitis@Mac REDALERT % sh build.sh
 -- Configuring done (0.0s)
 -- Generating done (0.0s)
--- Build files have been written to: /Users/aeonitis/dev/repos/wip/CnC-Platform-Wars/REDALERT/build
+-- Build files have been written to: /CnC-Platform-Wars/REDALERT/build
 [  0%] Building CXX object CMakeFiles/RedAlert.dir/src/2keyfram.cpp.o
-In file included from /Users/aeonitis/dev/repos/wip/CnC-Platform-Wars/REDALERT/src/2keyfram.cpp:39:
-In file included from /Users/aeonitis/dev/repos/wip/CnC-Platform-Wars/REDALERT/include/function.h:206:
-In file included from /Users/aeonitis/dev/repos/wip/CnC-Platform-Wars/REDALERT/include/win32/wwlib32.h:36:
-In file included from /Users/aeonitis/dev/repos/wip/CnC-Platform-Wars/REDALERT/include/win32/gbuffer.h:110:
-/Users/aeonitis/dev/repos/wip/CnC-Platform-Wars/REDALERT/include/win32/ddraw.h:29:10: fatal error: 'objbase.h' file not found
+In file included from /CnC-Platform-Wars/REDALERT/src/2keyfram.cpp:39:
+In file included from /CnC-Platform-Wars/REDALERT/include/function.h:206:
+In file included from /CnC-Platform-Wars/REDALERT/include/win32/wwlib32.h:36:
+In file included from /CnC-Platform-Wars/REDALERT/include/win32/gbuffer.h:110:
+/CnC-Platform-Wars/REDALERT/include/win32/ddraw.h:29:10: fatal error: 'objbase.h' file not found
    29 | #include <objbase.h>
       |          ^~~~~~~~~~~
 1 error generated.
 make[2]: *** [CMakeFiles/RedAlert.dir/src/2keyfram.cpp.o] Error 1
 make[1]: *** [CMakeFiles/RedAlert.dir/all] Error 2
 make: *** [all] Error 2
-Build completed for MACOS (Release)
+Build completed for MACOS (TryingToCompile)
 ```
 
 ## Planned Project Structure
@@ -59,18 +61,15 @@ Build completed for MACOS (Release)
 Let's work towards this...
 ```
 REDALERT/  
-│── CMakeLists.txt  
-│── License.txt  
-├── src/               # Source files (.cpp, .c, .h, .hpp, .asm)  
-│   ├── main.cpp  
+│── build.sh            # Shell script for simple compilation!
+│── CMakeLists.txt      # Manage source files & targets (executable, library, etc...)
+├── src/                # Source files (.cpp, .c, .h, .hpp, .asm)  
+│   ├── main.cpp
 │   ├── core/           # Core logic, Platform-independent (e.g., game engine, networking)  
 │   ├── win32/          # Windows-specific source files (C++ and ASM)
 │   ├── linux/          # Linux-specific source files
 │   ├── macos/          # macOS-specific source files
-│   └── resources/      # Windows .rc files, icons, etc.
-│   ├── graphics/       # Rendering-related files
-│   ├── audio/          # Sound-related files
-│   ├── platform/       # Platform-specific implementations
+│   ├── resources/      # Windows .rc files, icons, etc.
 │   ├── util/           # Utility/helper functions  
 |   |
 ├── include/            # Headers (if separated from src)  
@@ -81,11 +80,17 @@ REDALERT/
 │   └── resources/      # Build-time resources e.g. .rc files, UI icons, version info
 ├── assets/             # Runtime assets e.g. Game assets: textures (images), sounds, models, levels, etc...
 ├── external/           # Third-party libraries (not in build)
+│   ├── tgautil.py      # Utility for working with TGA (Targa) image files & ZIP archives
 ├── build/              # Out-of-source build directory (gitignored)  
 ├── tests/              # Unit tests  
 │── docs/               # Documentation
-│── README.md
-└── LICENSE
+│── RedAlert.vcxproj             # VS Studio Config - Windows specific
+└── RedAlert.vcxproj.filters     # VS Studio Config - Windows specific
+TIBERIANDAWN
+CnCTDRAMapEditor
+.gitignore
+README.md
+LICENSE.md
 ```
 
 **Contributing:**
@@ -111,7 +116,7 @@ If you would like to contribute to the project, please follow these steps:
 5. Create a pull request to the main repository.
 
 ## License
-This project is licensed under the MIT License. See the `LICENSE` file for more details.
+This project is under the GNU License. See the [LICENSE.md](https://github.com/Aeonitis/CnC-Platform-Wars/blob/master/LICENSE.md) file for more details.
 
 ## Contact
 For any questions or inquiries, please contact yourself, you are the best person for the job!!!
