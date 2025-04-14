@@ -172,7 +172,7 @@ RedAlert/
 
 
 ## Old Readme.md
-```log
+```md
 # Command & Conquer Remastered Collection
 
 This repository includes source code for TiberianDawn.dll, RedAlert.dll and the Map Editor for the Command & Conquer Remastered Collection. This release provides support to the [Steam Workshop](https://steamcommunity.com/workshop/browse/?appid=1213210) for the C&C Remaster Collection.
